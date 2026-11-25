@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+    <linearGradient id="cyber-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 242, 254, 0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad)" />
+  <rect width="800" height="500" fill="url(#grid)" />
+
+  <!-- Ambient light blobs -->
+  <circle cx="200" cy="200" r="160" fill="#6366f1" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="600" cy="250" r="180" fill="#00f2fe" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="400" cy="380" r="150" fill="#ec4899" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Tech circuit accents in background -->
+  <path d="M 50 100 L 150 100 L 180 130 L 320 130" stroke="rgba(0,242,254,0.3)" stroke-width="2" fill="none"/>
+  <circle cx="50" cy="100" r="4" fill="#00f2fe"/>
+  <circle cx="320" cy="130" r="4" fill="#00f2fe"/>
+
+  <path d="M 750 380 L 650 380 L 620 350 L 520 350" stroke="rgba(236,72,153,0.3)" stroke-width="2" fill="none"/>
+  <circle cx="750" cy="380" r="4" fill="#ec4899"/>
+  <circle cx="520" cy="350" r="4" fill="#ec4899"/>
+
+  <!-- TEAM AVATARS: 4 Team Members standing together -->
+
+  <!-- Member 1: Left (Lead AI Dev) -->
+  <g transform="translate(140, 160)">
+    <!-- Halo glow -->
+    <circle cx="70" cy="65" r="55" fill="rgba(0, 242, 254, 0.15)" filter="url(#glow)" />
+    <!-- Body -->
+    <path d="M 20 250 C 20 180, 50 150, 70 145 C 90 150, 120 180, 120 250 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M 50 160 L 70 195 L 90 160 Z" fill="url(#cyber-cyan)"/>
+    <!-- Head -->
+    <circle cx="70" cy="75" r="42" fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+    <!-- Hair -->
+    <path d="M 32 70 Q 70 30 108 70 Q 95 40 70 45 Q 45 40 32 70" fill="#0284c7"/>
+    <!-- Glasses / Visor HUD -->
+    <rect x="44" y="66" width="52" height="15" rx="4" fill="rgba(0, 242, 254, 0.7)" filter="url(#glow)"/>
+    <line x1="50" y1="73.5" x2="90" y2="73.5" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="70" y="275" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" text-anchor="middle">ALEX M.</text>
+    <text x="70" y="292" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" text-anchor="middle">AI Lead</text>
+  </g>
+
+  <!-- Member 2: Center-Left (Lead Architect / Captain) -->
+  <g transform="translate(280, 120)">
+    <!-- Aura -->
+    <circle cx="80" cy="75" r="65" fill="rgba(251, 191, 36, 0.2)" filter="url(#glow)" />
+    <!-- Trophy Crown icon above captain -->
+    <path d="M 65 15 L 72 28 L 88 18 L 84 35 L 76 35 Z" fill="url(#gold-grad)"/>
+    <!-- Body -->
+    <path d="M 20 290 C 20 210, 60 170, 80 165 C 100 170, 140 210, 140 290 Z" fill="#0f172a" stroke="#fbbf24" stroke-width="2.5"/>
+    <path d="M 55 180 L 80 230 L 105 180 Z" fill="url(#gold-grad)"/>
+    <!-- Head -->
+    <circle cx="80" cy="85" r="48" fill="#1e293b" stroke="#fbbf24" stroke-width="2.5"/>
+    <!-- Modern hairstyle -->
+    <path d="M 36 80 C 35 45, 125 45, 124 80 C 115 50, 80 50, 36 80 Z" fill="#d97706"/>
+    <!-- Smart HUD Glasses -->
+    <rect x="52" y="76" width="56" height="18" rx="5" fill="rgba(251, 191, 36, 0.85)" filter="url(#glow)"/>
+    <circle cx="68" cy="85" r="3" fill="#ffffff"/>
+    <circle cx="92" cy="85" r="3" fill="#ffffff"/>
+    <!-- Captain Badge -->
+    <circle cx="80" cy="210" r="10" fill="#fbbf24"/>
+    <polygon points="80,203 82,208 87,208 83,211 85,216 80,213 75,216 77,211 73,208 78,208" fill="#0f172a"/>
+    <text x="80" y="315" fill="#fbbf24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" text-anchor="middle">MAYA CHEN</text>
+    <text x="80" y="333" fill="#fde68a" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600" text-anchor="middle">Team Captain &amp; Arch</text>
+  </g>
+
+  <!-- Member 3: Center-Right (Full-Stack Engineer) -->
+  <g transform="translate(440, 140)">
+    <!-- Halo glow -->
+    <circle cx="75" cy="70" r="60" fill="rgba(168, 85, 247, 0.2)" filter="url(#glow)" />
+    <!-- Body -->
+    <path d="M 20 270 C 20 195, 55 160, 75 155 C 95 160, 130 195, 130 270 Z" fill="#1e1b4b" stroke="#a855f7" stroke-width="2"/>
+    <path d="M 55 170 L 75 210 L 95 170 Z" fill="url(#neon-purple)"/>
+    <!-- Head -->
+    <circle cx="75" cy="80" r="45" fill="#312e81" stroke="#a855f7" stroke-width="2"/>
+    <!-- Hairstyle ponytail/flowing -->
+    <path d="M 35 75 Q 75 35 115 75 Q 125 120 110 130 Q 115 85 75 55 Q 35 85 35 75 Z" fill="#7c3aed"/>
+    <!-- Cyber eyewear -->
+    <rect x="50" y="72" width="50" height="16" rx="4" fill="rgba(168, 85, 247, 0.75)" filter="url(#glow)"/>
+    <line x1="56" y1="80" x2="94" y2="80" stroke="#fbcfe8" stroke-width="2"/>
+    <text x="75" y="295" fill="#c084fc" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" text-anchor="middle">ELENA ROSTOVA</text>
+    <text x="75" y="312" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="10.5" text-anchor="middle">Full-Stack &amp; Web3</text>
+  </g>
+
+  <!-- Member 4: Right (UI/UX & Creative Tech) -->
+  <g transform="translate(580, 170)">
+    <!-- Halo glow -->
+    <circle cx="65" cy="60" r="50" fill="rgba(236, 72, 153, 0.2)" filter="url(#glow)" />
+    <!-- Body -->
+    <path d="M 15 240 C 15 175, 45 145, 65 140 C 85 145, 115 175, 115 240 Z" fill="#18181b" stroke="#ec4899" stroke-width="2"/>
+    <path d="M 45 155 L 65 190 L 85 155 Z" fill="url(#neon-purple)"/>
+    <!-- Head -->
+    <circle cx="65" cy="70" r="40" fill="#27272a" stroke="#ec4899" stroke-width="2"/>
+    <!-- Curly Hair -->
+    <path d="M 30 65 Q 65 25 100 65 Q 90 40 65 42 Q 40 40 30 65 Z" fill="#be185d"/>
+    <!-- Neon Earphones / Mic -->
+    <path d="M 28 65 Q 24 75 28 85 L 40 92" stroke="#ec4899" stroke-width="2.5" fill="none"/>
+    <circle cx="41" cy="93" r="3" fill="#00f2fe"/>
+    <text x="65" y="265" fill="#f472b6" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" text-anchor="middle">DAVID KIM</text>
+    <text x="65" y="282" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" text-anchor="middle">UI/UX Designer</text>
+  </g>
+
+  <!-- Holographic Tech Frame Overlay on the group photo -->
+  <rect x="40" y="30" width="720" height="440" rx="16" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <rect x="50" y="40" width="700" height="420" rx="12" fill="none" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1" stroke-dasharray="8,6"/>
+  
+  <!-- Cyber Corner HUD Brackets -->
+  <path d="M 40 70 L 40 40 L 70 40" stroke="#00f2fe" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M 760 70 L 760 40 L 730 40" stroke="#00f2fe" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M 40 430 L 40 460 L 70 460" stroke="#ec4899" stroke-width="3" fill="none" filter="url(#glow)"/>
+  <path d="M 760 430 L 760 460 L 730 460" stroke="#ec4899" stroke-width="3" fill="none" filter="url(#glow)"/>
+
+  <!-- Top HUD banner -->
+  <g transform="translate(400, 35)">
+    <rect x="-120" y="0" width="240" height="24" rx="12" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(0, 242, 254, 0.5)" stroke-width="1"/>
+    <circle cx="-95" cy="12" r="4" fill="#22c55e" filter="url(#glow)"/>
+    <text x="-80" y="16" fill="#e2e8f0" font-family="'Segoe UI', monospace" font-size="10" letter-spacing="2">TEAM ROSTER VERIFIED</text>
+  </g>
+
+  <!-- Bottom Tech Watermark -->
+  <text x="400" y="485" fill="rgba(148, 163, 184, 0.6)" font-family="'Segoe UI', monospace" font-size="10" text-anchor="middle" letter-spacing="3">TEAM NEURAL VANGUARD • OFFICIAL HACKATHON RECORDING</text>
+</svg>

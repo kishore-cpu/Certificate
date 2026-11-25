@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold-foil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="25%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="75%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+    <filter id="seal-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Starburst/Rosette -->
+  <g transform="translate(100,100)">
+    <!-- 24-point star rosette -->
+    <path d="
+      M 0 -85 L 11 -78 L 22 -82 L 31 -72 L 44 -72 L 50 -60 L 63 -56 L 66 -42 L 77 -35 L 76 -20 L 84 -11 L 80 4 L 85 16 L 78 28 L 80 42 L 70 52 L 68 66 L 56 73 L 50 85 L 36 88 L 27 97 L 12 96 L 0 102 L -12 96 L -27 97 L -36 88 L -50 85 L -56 73 L -68 66 L -70 52 L -80 42 L -78 28 L -85 16 L -80 4 L -84 -11 L -76 -20 L -77 -35 L -66 -42 L -63 -56 L -50 -60 L -44 -72 L -31 -72 L -22 -82 L -11 -78 Z
+    " fill="url(#gold-foil)" stroke="#d97706" stroke-width="1.5" filter="url(#seal-glow)"/>
+
+    <!-- Inner Rings -->
+    <circle cx="0" cy="0" r="70" fill="#0f172a" stroke="url(#gold-foil)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="66" fill="none" stroke="rgba(251, 191, 36, 0.4)" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="url(#gold-foil)" stroke-width="1.5"/>
+
+    <!-- Trophy Emblem in center -->
+    <g transform="scale(0.85) translate(-24, -26)">
+      <path d="M 12 10 L 36 10 C 36 28 32 36 24 38 C 16 36 12 28 12 10 Z" fill="url(#gold-foil)"/>
+      <path d="M 12 14 C 4 14 4 26 12 26" fill="none" stroke="url(#gold-foil)" stroke-width="2.5"/>
+      <path d="M 36 14 C 44 14 44 26 36 26" fill="none" stroke="url(#gold-foil)" stroke-width="2.5"/>
+      <rect x="21" y="38" width="6" height="8" fill="url(#gold-foil)"/>
+      <rect x="15" y="46" width="18" height="6" rx="2" fill="url(#gold-foil)"/>
+      <!-- Star on trophy -->
+      <polygon points="24,18 26,22 30,22 27,24 28,28 24,26 20,28 21,24 18,22 22,22" fill="#0f172a"/>
+    </g>
+
+    <!-- Circular Text Path -->
+    <path id="textPath-top" d="M -58,0 A 58,58 0 1,1 58,0" fill="none"/>
+    <path id="textPath-bottom" d="M 58,0 A 58,58 0 0,1 -58,0" fill="none"/>
+
+    <text fill="#fef08a" font-family="'Segoe UI', sans-serif" font-size="7.5" font-weight="800" letter-spacing="2.2">
+      <textPath href="#textPath-top" startOffset="50%" text-anchor="middle">
+        OFFICIAL HACKATHON AWARD
+      </textPath>
+    </text>
+    <text fill="#fde68a" font-family="'Segoe UI', sans-serif" font-size="7" font-weight="700" letter-spacing="1.8">
+      <textPath href="#textPath-bottom" startOffset="50%" text-anchor="middle">
+        ★ VERIFIED &amp; CERTIFIED ★
+      </textPath>
+    </text>
+  </g>
+</svg>
